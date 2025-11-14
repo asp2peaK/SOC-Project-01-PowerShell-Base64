@@ -17,7 +17,7 @@ This simulation represents how attackers use encoded PowerShell commands to evad
 
 ---
 
-## 🔥 1. Triggered Command (Simulated Attack)
+##  1. Triggered Command (Simulated Attack)
 
 Command executed:  
 `powershell.exe -enc SQBFAFgAIAAoACcAVABFU1QtU09DICcAKQA=`
@@ -29,7 +29,7 @@ The payload is harmless, but the execution technique mimics real-world malware b
 
 ---
 
-## 🔍 2. Sysmon Event — Key Details
+##  2. Sysmon Event — Key Details
 
 Event ID 1 — Process Create (Sysmon)
 
@@ -48,7 +48,7 @@ Indicators of interest:
 
 ---
 
-## 🧠 3. SOC Triage (L1 Analysis)
+##  3. SOC Triage (L1 Analysis)
 
 Is this suspicious?  
 Yes. Encoded PowerShell is strongly associated with:
@@ -69,7 +69,7 @@ Benign — training simulation, but behavior fully matches attacker tradecraft.
 
 ---
 
-## 🛠 4. Lab Environment
+##  4. Lab Environment
 
 OS: Windows 10  
 Sysmon: v15.15  
@@ -78,7 +78,7 @@ Log viewer: Windows Event Viewer (Microsoft-Windows-Sysmon/Operational)
 
 ---
 
-## 📸 5. Screenshots (Recommended Structure)
+##  5. Screenshots (Recommended Structure)
 
 Put screenshots into:
 
@@ -88,7 +88,7 @@ Put screenshots into:
 
 ---
 
-## 🎯 6. What This Project Demonstrates
+##  6. What This Project Demonstrates
 
 - Setting up Sysmon for security monitoring  
 - Detecting encoded PowerShell commands  
@@ -99,7 +99,7 @@ Put screenshots into:
 
 ---
 
-## 🧩 MITRE ATT&CK Mapping
+##  MITRE ATT&CK Mapping
 
 Technique ID: `T1059.001`  
 Name: `PowerShell`  
@@ -107,7 +107,7 @@ Description: Adversaries execute malicious or obfuscated PowerShell commands.
 
 ---
 
-## 👤 Author
+##  Author
 
 Maksim Talalayko  
 SOC & Operational Security  
@@ -117,6 +117,6 @@ TryHackMe: https://tryhackme.com/p/maksim.talalayko
 
 ---
 
-## 🔖 Tags
+##  Tags
 
 SOC • Blue Team • Sysmon • PowerShell • MITRE ATT&CK • T1059 • Incident Response • DFIR • Windows Security • SIEM
