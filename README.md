@@ -78,13 +78,16 @@ Log viewer: Windows Event Viewer (Microsoft-Windows-Sysmon/Operational)
 
 ---
 
-##  5. Screenshots (Recommended Structure)
+##  5. Screenshots
 
-Put screenshots into:
+### PowerShell — encoded command executed
+![PowerShell Base64 Command](screenshots/powershell-base64-command.png)
 
-- `screenshots/sysmon-event.png`  
-- `screenshots/base64-command.png`  
-- `screenshots/xml-log.png`
+### Sysmon — Event ID 1 (Process Create)
+![Sysmon Event List](screenshots/sysmon-event-list.png)
+
+### Sysmon — XML Event Data (MITRE T1059.001)
+![Sysmon Event XML](screenshots/sysmon-event-xml.png)
 
 ---
 
