@@ -36,7 +36,7 @@ Event ID 1 — Process Create (Sysmon)
 Image: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`  
 CommandLine: `"powershell.exe" -enc SQBFAFgAIAAoACcAVABFU1QtU09DICcAKQA=`  
 IntegrityLevel: `High`  
-User: `APACS-PC\Apacs3000`  
+User: `-PC\-`  
 ParentImage: `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`  
 RuleName: `technique_id=T1059.001,technique_name=PowerShell`
 
