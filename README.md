@@ -19,85 +19,73 @@ This simulation represents how attackers use encoded PowerShell payloads to evad
 
 ---
 
-## 🔥 1. Triggered Command (Simulated Attack)
+##1. Triggered Command (Simulated Attack)
 
 Command executed:
 
 ```powershell
 powershell.exe -enc SQBFAFgAIAAoACcAVABFU1QtU09DICcAKQA=
-Decoded payload:
+```
 
-powershell
-Копировать код
+Decoded payload:
+```powershell
 IEX ('TEST-SOC')
+```
+
 The payload is benign, but the behavior fully mimics malicious obfuscated execution.
 
-🔍 2. Sysmon Event — Key Details
+2. Sysmon Event — Key Details
 Event ID 1 — Process Create
 
-xml
-Копировать код
+```xml
 Image: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 CommandLine: "powershell.exe" -enc SQBFAFgAIAAoACcAVABFU1QtU09DICcAKQA=
 IntegrityLevel: High
 User: APACS-PC\Apacs3000
 ParentImage: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 RuleName: technique_id=T1059.001,technique_name=PowerShell
+```
 Indicators:
-
 Use of “-enc” (Base64 obfuscation)
-
 PowerShell spawned by PowerShell
-
 High integrity execution
-
 MITRE technique tagging from Sysmon
 
-🧠 3. SOC Triage (L1 Analysis)
+3. SOC Triage (L1 Analysis)
 Is it suspicious? — Yes.
 Encoded PowerShell is widely used for payload delivery, persistence, and credential theft.
 
-🔎 Indicators of Interest
+Indicators of Interest
 Encoded command execution
-
 High privileges
-
 Parent–child PowerShell chain
-
 Behavior mapped to MITRE automatically
 
-✔ Final Verdict
+Final Verdict
 Benign (lab simulation)
 But behavior fully matches real attacker tradecraft.
 
 🛠 4. Lab Environment
 OS: Windows 10
-
 Sysmon: v15.15
-
 Config: SwiftOnSecurity sysmonconfig.xml
-
 Log Viewer: Windows Event Viewer (Sysmon Operational Log)
 
-🖼 5. Screenshots (Add to Repository)
+5. Screenshots (Add to Repository)
 Suggested files:
 
-bash
-Копировать код
+```bash
 /screenshots/sysmon-event.png
 /screenshots/base64-command.png
 /screenshots/xml-log.png
-🎯 6. What This Project Demonstrates
+```
+
+6. What This Project Demonstrates
 Setting up Sysmon for monitoring
-
 Detecting encoded PowerShell commands
-
 Mapping to MITRE ATT&CK
-
 Log triage fundamentals
-
 Creating structured SOC documentation
-
 Using Event Viewer for DFIR and detection engineering
 
 📚 MITRE ATT&CK Mapping
